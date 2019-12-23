@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>给Marinebio打分</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+			height: 800px;
+			background-image:url('images/打分背景.jpg');
+			background-repeat: no-repeat;
+			background-size:cover;
+		}
+		* {
+		    margin: 0;
+		    padding: 0;
+		}
+		#wrap {
+		    width: 485px;
+		    margin: 20px auto;
+		}
+		#mark {
+		    line-height: 1.5em;
+		}
+		#mark h1 {
+		    height: 29px;
+		    font-family: "黑体";
+		    font-size: 20px;
+		    color: #666;
+		    line-height: 29px;
+		    padding-left: 20px;
+		    letter-spacing: 2px;
+		}
+		#pic {
+		    margin: 10px 0px;
+		}
+		#txt {
+		    width: 100%;
+		    height: 170px;
+		    margin: 0px auto;
+		}
+		.btn {
+		    width: 75px;
+		    height: 22px;
+		    float: right;
+		    margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+        <div id="mark">
+            <h1>您认为我们的网站怎么样？</h1>
+            <div id="pic">
+                <img src="images/star0.png" title="1" name="0"/>
+                <img src="images/star0.png" title="2" name="1"/>
+                <img src="images/star0.png" title="3" name="2"/>
+                <img src="images/star0.png" title="4" name="3"/>
+                <img src="images/star0.png" title="5" name="4"/>
+                <br/>
+            </div>
+            <form>
+                <textarea cols="40" rows="8" value="" id='txt'></textarea>
+                <br/>
+                <button class="btn" onclick="prompting()">提交</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+	// star
+	//评论信息储存
+	var comments = ["差", "一般", "中等", "还行", "好"];
+	//获取页面元素
+	var imgs = document.getElementsByTagName("img");
+	var text = document.getElementById("txt");
+	var clickPos = -1;
+	function show(index) {
+	    for (var x = (index + 1); x < imgs.length; x++) { //清空
+	        imgs[x].src = "images/star0.png";
+	    }
+	    if (index < 2) { //哭脸
+	        for (var j = 0; j <= index; j++) {
+	            imgs[j].src = "images/star1.png";
+	        }
+	    } else { //笑脸
+	        for (var j = 0; j <= index; j++) {
+	            imgs[j].src = "images/star2.png";
+	        }
+	    }
+	    text.value = comments[index]? comments[index]:"";
+	}
+	for (var i = 0; i < imgs.length; i++) {
+	    imgs[i].index = i;
+	    //悬浮
+	    imgs[i].onmouseover = function() {
+	        var pos = this.index;
+	        show(pos);
+	    };
+	    //点击
+	    imgs[i].onclick = function() {
+	        clickPos = this.index;
+	        show(clickPos);
+	    };
+	    //离开
+	    imgs[i].onmouseout = function() {
+	        show(clickPos);
+	    };
+	}
+	function prompting(){
+		alert("提交成功,即将跳转至首页");
+		setTimeout("javascript:location.href='../MarineOrganism/MarineOrganism.html'",0); 
+	}
+</script>
+</html>
