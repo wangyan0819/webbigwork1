@@ -1,0 +1,391 @@
+/*
+* @Author: Administrator
+* @Date:   2019-12-21 11:04:43
+* @Last Modified by:   Administrator
+* @Last Modified time: 2019-12-23 22:22:06
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,li,ol{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+body{
+	background-image: url('images/海洋森林2.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 700px;
+	background-attachment:fixed;
+}
+.header-wrapper{
+	height: 90px;
+	background-color: #00467f;
+	opacity:0.9;
+	filter: alpha(opacity=90);
+}
+.header{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+}
+.header img{
+	margin-top: 10px;
+	float: left;
+}
+.bookmark{
+	float: right;
+	width: 70px;
+	height: 61px;
+	padding-top: 23px;
+	text-align: center;
+	background-image: url('images/bookmark.png');
+	background-repeat: no-repeat;
+	background-size: 70px 84px;
+}
+.bookmark a{
+	color: #B0E2FF;
+	font-family: 楷体;
+	font-size: 20px;
+}
+.bookmark a:hover{
+	text-decoration: underline;
+}
+.nav{
+	float: right;
+	margin-right: 100px;
+}
+.nav li{
+	float: left;
+	width: 130px;
+	text-align: center;
+	margin-top: 40px;
+}
+.nav li a{
+	color: #fff;
+}
+.nav li a:hover{
+	color: #21b9ec;
+}
+#seatree{
+	color:#21b9ec;
+}
+#back{
+	height:610px;
+	width: 100%;
+	background-color:#000000;
+ 	opacity:0.6;
+}
+#top{
+	height: 700px;
+	width: 100%;
+	position:absolute;
+	top: 150px;
+} 
+#words{
+	height: 500px;
+	width: 800px;
+	position:relative;
+	top: 10px;
+}
+#treeone{
+/* 	text-align: center; */
+	margin-left: 30px;
+	color:#fff;
+	font-size: 45px;
+	position:relative;
+	top:90px;
+}
+#treetwo{
+	text-indent:2em;
+	margin-top: 40px;
+	margin-left: 30px;
+	color:#fff;
+	font-size: 20px;
+	position:relative;
+	top:70px;
+}
+#Low{
+	width: 100%;
+	height: 3350px;
+	background: linear-gradient(to left,#010101,#043b96);
+/* 	background-color: #262717; */
+}
+#text{
+	color: #fff;
+	font-size:20px;
+	background-color:#000000;
+	opacity:0.5;
+}
+/*轮播图*/
+.slide>li>img{
+	width: 400px;
+	height: 500px;
+}
+.box{
+	border: 2px solid #00ff6b;
+	float: right;
+	width:400px;
+	height:500px;
+	position:fixed; 
+	top: 95px;
+	right: 50px;
+	overflow:hidden;
+	background-color: #ccc;
+}
+.slider{
+	width:2800px;
+	position:absolute;
+	left:-400px;
+}
+.slide{
+	width:400px;
+	overflow:hidden;
+	float:left;
+}
+.box>span{
+	display:block;
+	width:30px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+	cursor:pointer;
+	color:white;
+	top:220px;
+ 	background:blue;
+	font-size:25px;
+	position:absolute;
+	opacity:0;
+}
+#left{
+	left:15px;
+}
+#right{
+	right:15px;
+}
+#big1{
+	width:400px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+	float: left;
+}
+#big2{
+	width:400px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+	float: left;
+}
+#big3{
+	width:400px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+	float: left;
+}
+#big4{
+	width:400px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+	float: left;
+}
+#big5{
+	width:400px;
+	height:280px;
+	overflow:hidden;
+	position:relative;
+	float: left;
+}
+/*海洋藻类*/
+#seaalgae{
+	width:1050px;
+}
+#seaalgae>div>img{
+	margin-top:10px;
+	width:400px;
+	height:280px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+#seaalgae>li{
+	font-family:'楷体';
+	color: #cacda2;
+	font-size:40px;
+	position:relative;
+	top: 5px;
+}
+#seaalgae>p{
+	font-family:'楷体';
+	color: #cacda2;
+	text-indent:2em;
+	font-size:30px;
+}
+/*浮游植物*/
+#phytoplankton{
+	width: 1050px;
+}
+#phytoplankton>div>img{
+	margin-top:10px;
+	width:400px;
+	height:280px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+#phytoplankton>li{
+	font-family:'楷体';
+	color: #65dfff;
+	font-size:40px;
+	position:relative;
+	top: 5px;
+}
+#phytoplankton>p{
+	font-family:'楷体';
+	color: #65dfff;
+	text-indent:2em;
+	font-size:30px;
+}
+/*硅藻*/
+#diatom{
+	width: 1050px;
+}
+#diatom>div>img{
+	margin-top:10px;
+	width:400px;
+	height:280px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+#diatom>li{
+	font-family:'楷体';
+	color: #ba926b;
+	font-size:40px;
+	position:relative;
+	top: 5px;
+}
+#diatom>p{
+	font-family:'楷体';
+	color: #be926b;
+	text-indent:2em;
+	font-size:30px;
+}
+/*鞭毛虫*/
+#flagellates{
+	width: 1050px;
+}
+#flagellates>div>img{
+	margin-top:10px;
+	width:400px;
+	height:280px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+#flagellates>li{
+	font-family:'楷体';
+	color: #ccc;
+	font-size:40px;
+	position:relative;
+	top: 5px;
+}
+#flagellates>p{
+	font-family:'楷体';
+	color: #ccc;
+	text-indent:2em;
+	font-size:30px;
+}
+/*红树林*/
+#mangrove{
+	width: 1050px;
+}
+#mangrove>div>img{
+	margin-top:10px;
+	width:400px;
+	height:280px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+#mangrove>li{
+	font-family:'楷体';
+	color: #40ffbc;
+	font-size:40px;
+	position:relative;
+	top: 5px;
+}
+#mangrove>p{
+	font-family:'楷体';
+	color: #40ffbc;
+	text-indent:2em;
+	font-size:30px;
+}
+/*底部*/
+#bottom{
+	height: 171px;
+	width:100%;
+	background: linear-gradient(to bottom right, #00467f, #000);
+	opacity: 0.9;
+}
+.footer-1,.footer-2{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer-1{
+	height: 90px;
+	border-bottom: 1px solid #0086ac;
+}
+.footer-1 img,.footer-1 a{
+	float: left;
+}
+.footer-1 .infor{
+	margin: 25px 12px 0px 33px;
+}
+.footer-1 a{
+	color: #00b5df;
+	display: inline-block;
+	margin-top: 35px;
+	font-size: 18px;
+}
+.email{
+	width: 45px;
+	height: 36px;
+}
+.qq{
+	width: 40px;
+	height: 42px;
+}
+.wx{
+	width: 44px;
+	height: 36px;
+}
+.phone{
+	width: 43px;
+	height: 44px;
+}
+
+.footer-2{
+	height: 65px;
+	color: #00b5df;
+	padding-top: 15px;
+	text-align: center;
+}
+.scoring-wrapper{
+	display: inline-block;
+	margin: 10px 0px;
+}
+.scoring-wrapper,.scoring{
+	color: #20B2AA;
+}
+.scoring:hover{
+	text-decoration: underline;
+}
+
