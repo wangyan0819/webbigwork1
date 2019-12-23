@@ -1,0 +1,297 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* 导航栏 */
+.header-wrapper{
+	height: 90px;
+	background-color: #00467f;
+	opacity:0.9;
+	filter: alpha(opacity=90);
+}
+.header{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+}
+.header img{
+	margin-top: 10px;
+	float: left;
+}
+.nav{
+	float: right;
+	margin-right: 35px;
+}
+.nav li{
+	float: left;
+	width: 130px;
+	text-align: center;
+	margin-top: 40px;
+}
+.nav li a{
+	color: #fff;
+}
+.nav li a:hover{
+	color: #21b9ec;
+}
+#shanhu{
+	color: #21b9ec;
+}
+
+.bookmark{
+	float: right;
+	width: 70px;
+	height: 61px;
+	padding-top: 23px;
+	text-align: center;
+	background-image: url('bookmark.png');
+	background-repeat: no-repeat;
+	background-size: 70px 84px;
+}
+.bookmark a{
+	color: #B0E2FF;
+	font-family: 楷体;
+	font-size: 20px;
+}
+.bookmark a:hover{
+	text-decoration: underline;
+}
+
+/* 背景图 */
+body{
+	background-image: url('masterGraph.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 590px;
+	background-attachment: fixed;
+}
+/* 透明层 */
+.overBurden{
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(to bottom right, #000, #00467f);
+	opacity: 0.2;
+	position: relative;
+}
+.title{
+	width: 1000px;
+	color: #fff;
+	font-size: 20px;
+	position: absolute;
+	top: 150px;
+	left: 100px;
+}
+.title p{
+	font-size: 40px;
+}
+/* 首图以下部分 */
+.body-wrapper{
+	background-color: #fff;
+	position: absolute;
+	top: 590px;
+}
+.overBurden1{
+	padding: 30px 50px;
+	background: linear-gradient(to bottom right, #fff, #4682B4);/*渐变从左上角到右下角*/
+}
+/* 轮播图 */
+.box{
+	width: 400px;
+	height: 300px;
+	margin: 30px;
+	overflow: hidden;
+	position: relative;
+	float: right;
+	margin-top: 10px;
+}
+.slider{
+	width: 2800px;
+	height: 300px;
+	position: absolute;
+	left: -400px;
+}
+.slide{
+	display: inline-block;
+	width: 400px;
+	float: left;
+	overflow: hidden;
+}
+.slide img{
+	width: 400px;
+	height: 300px;
+}
+/* 左右按钮 */
+.box:hover .both{
+	display: inline-block;
+}
+.both{
+	font-size: 22px;
+	color: #fff;
+	background-color: #21b9ec;
+	opacity:0.8;
+	filter: alpha(opacity=70);
+	padding: 10px 4px;
+	position: absolute;
+	top: 120px;
+	display: none;
+	border: none;
+}
+#left{
+	left: 25px;
+}
+#right{
+	right: 25px;
+}
+/* 划上图片显示文字内容 */
+#tooltip {
+	color: #00345c;
+	border: 1px solid #00789f;
+    position: fixed;
+    background: #B0E0E6;
+    display: inline;
+    padding: 0px 5px;
+}
+
+/* 主要内容 */
+.h{
+	font-size: 33px;
+	font-weight: 600;
+	margin: 10px 0px;
+	font-family: 楷体;
+	color: #00467f;
+}
+.p{
+	font-size: 20px;
+	text-indent: 36px;
+	line-height: 30px;
+}
+.p1{
+	margin-bottom: 15px;
+}
+.p6{
+	margin-top: 10px;
+}
+.jpg1,.jpg2,.jpg3-1,.jpg4{
+	overflow: hidden;
+	position: relative;
+}
+.img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.jpg1{
+	float: left;
+	margin: 15px 20px 25px 0px;
+	width: 266px;
+	height: 340px;
+}
+.jpg1 img{
+	height: 340px;
+}
+.jpg2{
+	float: right;
+	margin: 0px 0px 10px 20px;
+	width: 300px;
+	height: 388px;
+}
+.jpg2 img{
+	width: 300px;
+	height: 388px;
+}
+.jpg3{
+	text-align: center;
+}
+.jpg3-1{
+	width: 960px;
+	height: 516px;
+	display: inline-block;
+}
+.jpg4{
+	float: left;
+	margin: 20px 20px 20px 0;
+	width: 400px;
+	height: 300px;
+}
+/* 底栏 */
+.footer-wrapper{
+	height: 171px;
+	background: linear-gradient(to bottom right, #00467f, #000);
+	opacity: 0.9;
+}
+.footer-1,.footer-2{
+	width: 1200px;
+	margin: 0 auto;
+}
+.footer-1{
+	height: 90px;
+	border-bottom: 1px solid #0086ac;
+}
+.footer-1 img,.footer-1 a{
+	float: left;
+}
+.footer-1 .infor{
+	margin: 25px 12px 0px 33px;
+}
+.footer-1 a{
+	color: #00b5df;
+	display: inline-block;
+	margin-top: 35px;
+	font-size: 18px;
+}
+.email{
+	width: 45px;
+	height: 36px;
+}
+.qq{
+	width: 40px;
+	height: 42px;
+}
+.wx{
+	width: 44px;
+	height: 36px;
+}
+.phone{
+	width: 43px;
+	height: 44px;
+}
+
+.footer-2{
+	height: 65px;
+	color: #00b5df;
+	padding-top: 15px;
+	text-align: center;
+}
+.scoring-wrapper{
+	display: inline-block;
+	margin: 10px 0px;
+}
+.scoring-wrapper,.scoring{
+	color: #20B2AA;
+}
+.scoring:hover{
+	text-decoration: underline;
+}
+
+
+/* 回到顶部 */
+.goTop{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: radial-gradient(circle, #00467f, #fff);
+	opacity: 0.8;
+	position: fixed;
+	bottom: 90px;
+	right: 80px;
+}
+.goTop img{
+	position: absolute;
+	top: 12px;
+	left: 13px;
+}
