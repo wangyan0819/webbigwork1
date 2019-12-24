@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul li{
+			display: block;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			background-image:url('images/bg2.jpg');
+			background-repeat: no-repeat;
+			background-size:100%;
+		}
+		.boxdenglu{
+			width: 300px;
+			height: 310px;
+			padding: 0 20px;
+			border: 2px solid #00467f;
+			margin: 90px auto;
+			background-color:#fff;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.brand{
+			display: inline-block;
+			color: #1688ea;
+			font-size: 18px;
+			margin-right: 20px;
+			margin-top:15px;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #eee;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: #1688ea;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color: #fff;
+			border-radius: 3px;
+		}
+		.logo{
+			width: 140px;
+			height: 50px;
+			float:right;
+		}
+		.denglu1{
+			display: inline;
+		}
+		.title{
+			width: 100%;
+			height:80px;
+			background-color:#fff;
+		}
+		.intitle{
+			width: 1200px;
+			height:80px;
+			margin: 0 auto;
+		}
+		.header-wrapper{
+		height: 90px;
+		opacity:1;
+		filter: alpha(opacity=90);
+		position:absolute;
+		position: relative;
+		top:0px;
+		background-color: #00467f;
+	}
+	.header{
+		width: 1200px;
+		height: 90px;
+		margin: 0 auto;
+		position: absolute;
+		left:30px;			
+		top: 0px;
+		margin: 0 auto;
+	}
+	.header img{
+		margin-top: 10px;
+		float: left;
+	}
+	.nav{
+		float: right;
+		margin-right: 100px;
+	}
+	.nav li{
+		float: left;
+		width: 130px;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.nav li a{
+		color: #fff;
+	}
+	.nav li a:hover{
+		color: #21b9ec;
+	}
+	</style>
+</head>
+<body>
+	<div class="header-wrapper">
+		<div class="header" style="background-color: #00467f">
+			<img src="images/logo.png">
+				<ul class="nav">
+					<li><a href="MarineOrganism/MarineOrganism.html">海洋生物</a></li>
+					<li><a href="MarineMammals/MarineMammals.html">海洋哺乳动物</a></li>
+					<li><a href="MarineForests/MarineForests.html">海洋森林</a></li>
+					<li><a href="CoralReef/CoralReef.html">珊瑚礁</a></li>
+					<li><a href="Dolphin/Dolphin.html">海豚</a></li>
+					<li><a href="Penguin/Penguin.html">企鹅</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="boxdenglu">
+		<p class="tit">
+			<!-- <span class="brand">Marinebio</span> -->
+			<span class="brand">用户登录</span>
+			<img class="logo" src="images/logo.png">
+		</p>
+
+		<input class="inp" type="text" placeholder="用户名" >
+		<p class="notice" ></p>
+
+		<input class="inp" type="password" placeholder="密码" >
+		<p class="notice"></p>
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		<input type="checkbox" checked>下次自动登录
+		<a><button class="btn">登录</button></a>
+	</div>
+	<script>
+		var input=document.getElementsByClassName("inp");
+		var button=document.getElementsByTagName("button");
+		var images=document.getElementsByClassName("codeImg");
+		var P=document.getElementsByClassName("notice");
+		var a=document.getElementsByTagName("a");
+		var Y;
+		input[0].setAttribute("onfocus","name1()");
+		input[0].setAttribute("onblur","delete1()");
+		input[1].setAttribute("onfocus","digit()");
+		input[1].setAttribute("onblur","delete2()");
+		button[0].setAttribute("onclick","denglu()");
+		function name1(){
+			P[0].innerHTML="请输入4-10位用户名";
+		}
+		function digit(){
+			P[1].innerHTML="请输入6-12位密码";
+		}
+		function delete1(){
+			P[0].innerHTML="";
+		}
+		function delete2(){
+			P[1].innerHTML="";
+		}
+		function  denglu(){
+			var name=input[0].value;
+			var screat=input[1].value;
+			//var auth=input[2].value;
+			var Tag=0;
+			if (name==""||name.length<4||name.length>10) {
+				if(name.length==0)
+					P[0].innerHTML="用户名不能为空！";
+				else
+					P[0].innerHTML="用户名不符合要求！";
+				Tag=1;
+			}
+			if(name!="2018011999"&&name!="2018011994"||screat!="123456"){
+				if(name!="2018011999"||name!="2018011994")
+					P[0].innerHTML="该用户名不存在！";
+				else
+					P[1].innerHTML="密码不正确！";
+				Tag=1;
+			}
+			if(screat==""||screat.length<6||screat.length>12){
+				if (screat.length==0) 
+					P[1].innerHTML="密码不能为空！";
+				else
+					P[1].innerHTML="密码不符合要求！";
+				Tag=1;
+			}
+			if (Tag==0)
+				a[6].setAttribute("href","MarineOrganism/MarineOrganism.html");
+		}
+	</script>
+</body>
+</html>
