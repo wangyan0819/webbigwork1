@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="sea.css">
+	<script type="text/javascript" src="sea.js"></script>
+	<style type="text/css">
+		.fish{
+			position: fixed;
+			right: 20px;
+			z-index: 6;
+		}
+	</style>
+</head>
+<body>
+	<img class = "fish" style="bottom: 20px" src="fish.png">
+	<div class="header-wrapper">
+		<div class="header">
+			<img src="logo.png">
+			<div class="bookmark">
+				<p>
+					<a href="../register.html">注册</a>
+				</p>
+				
+				<a href="../login.html">登陆</a>
+			</div>
+			<ul class="nav">
+				<li><a href="../MarineOrganism/MarineOrganism.html">海洋生物</a></li>
+				<li><a href="../MarineMammals/MarineMammals.html">海洋哺乳动物</a></li>
+				<li><a href="../MarineForests/MarineForests.html">海洋森林</a></li>
+				<li><a href="../CoralReef/CoralReef.html">珊瑚礁</a></li>
+				<li><a href="../Dolphin/Dolphin.html">海豚</a></li>
+				<li><a href="../Penguin/Penguin.html">企鹅</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="background">
+		<div class="link1">
+			<div class="color">
+				<p>海豚是人类非常亲近的朋友，想要了解他们更多吗？点击图片去了解吧！</p>
+			</div>
+			
+			
+			<h1>
+				<img  class = "sun" src="孙宇菲.jpg">
+			</h1>
+			
+		</div>
+
+		<div class="link2">
+			<div class="color">
+				<p class="text">没有想到吧，企鹅不仅属于海洋生物，更是海洋之舟呢！</p>
+			<h1>
+				<img class = "yan" src="艳.jpg">
+			</h1>
+			</div>		
+		</div>
+
+		<div class="link3">
+			<div class="color">
+				<p>不知道吧，珊瑚礁也是海洋动物呢！快点开图片了解一下吧！</p>
+			</div>
+			
+			<h1>
+				<img class = "hu"  src="小胡.jpg">
+			</h1>
+		</div>
+
+		<div class="link4">
+			<div class="color"><p>北极熊可爱吧，有没有被它萌到呢，快去了解他更多吧！</p></div>
+			
+			<h1>
+				<img class = "du" src="杜佳玉.png">
+			</h1>
+
+		</div>
+
+		<div class="link5">
+			<div class="color"><p>海底森林</p></div>
+			
+			
+			<h1>
+				<img class = "yao" src="瑶.jpg">
+			</h1>
+			
+		</div>
+
+	</div>
+	<div class="navigator">
+		<h1 class="navone scroll">
+			<img src="qq.png">
+		</h1>
+		<h1 class="navtwo scroll">
+			<img src="feige.png">
+		</h1>
+		<h1 class="navthree scroll">
+			<img src="wx.png">
+		</h1>
+		<h1 class="navfour scroll">
+			<img src="wb.png">
+		</h1>
+		<h1 class="navfive scroll">
+			<img src="phone.png">
+			
+		</h1>
+	</div>
+	<div class="footer-wrapper">
+		<div class="footer-1">
+			<img src="logo.png">
+			<img src="Email.png" class="email infor">
+			<a href="#">info@marinebio.org</a>
+			<img src="qq2.png" class="qq infor">
+			<a href="#">57893256</a>
+			<img src="wx2.png" class="wx infor">
+			<a href="#">wxid_marinebio</a>
+			<img src="phone2.png" class="phone infor">
+			<a href="#">+1.713.248.2576</a>
+		</div>
+		<div class="footer-2">
+			<span>1998-2019&nbsp; | “最终所有人都返回大海-回到海洋河，就像漫长的时间流，开始和结束一样。” -雷切尔·卡森（Rachel Carson）</span><br>
+			<span class="scoring-wrapper">给我们
+				<a href="../scoring.html" class="scoring">打分</a>
+				，让我们做的更好
+			</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var a1 = document.getElementsByClassName("sun")[0];
+	var a2 = document.getElementsByClassName("yan")[0];
+	var a3 = document.getElementsByClassName("hu")[0];
+	var a4 = document.getElementsByClassName("du")[0];
+	var a5 = document.getElementsByClassName("yao")[0];
+	var scroll1 = document.getElementsByClassName("scroll")[1];
+	var scroll2=document.getElementsByClassName("scroll")[2];
+	var scroll3 = document.getElementsByClassName("scroll")[3];
+	var scroll4=document.getElementsByClassName("scroll")[4];
+	var scroll0=document.getElementsByClassName("scroll")[0];
+	var fish = document.getElementsByClassName("fish")[0];
+	setInterval(function(){
+	if(parseInt(getComputedStyle(fish,null)["bottom"])>=20 ){
+		fish.style.bottom = parseInt(fish.style.bottom)+2+"px";
+	}
+	if(parseInt(getComputedStyle(fish,null)["bottom"])==40){
+		while(parseInt(getComputedStyle(fish,null)["bottom"])!=20){
+			fish.style.bottom = parseInt(fish.style.bottom)-2+"px";
+		}
+		
+	}
+}
+,200)
+a1.onclick=function(){
+	location.href="http://.baidu.com";
+}
+a2.onclick=function(){
+	location.href="https://wangyan0819.github.io/webda/webhtml.html";
+}
+a3.onclick=function(){
+	location.href="http://.baidu.com";
+}
+a4.onclick=function(){
+	location.href="http://.baidu.com";
+}
+a5.onclick=function(){
+	location.href="http://.baidu.com";
+}
+scroll0.onmouseover = function(){
+	startMove(-100,scroll0);
+}
+scroll0.onmouseout = function(){
+	startMove(-120,scroll0);
+}
+scroll1.onmouseover = function(){
+	startMove(-100,scroll1);
+}
+scroll1.onmouseout = function(){
+	startMove(-120,scroll1);
+}
+scroll2.onmouseover = function(){
+	startMove(-100,scroll2);
+}
+scroll2.onmouseout = function(){
+	startMove(-120,scroll2);
+}
+scroll3.onmouseover = function(){
+	startMove(-100,scroll3);
+}
+scroll3.onmouseout = function(){
+	startMove(-120,scroll3);
+}
+scroll4.onmouseover = function(){
+	startMove(-100,scroll4);
+}
+scroll4.onmouseout = function(){
+	startMove(-120,scroll4);
+}
+var timer;
+function startMove(target,a){
+	clearInterval(timer);
+	timer=setInterval(function(){
+		var speed;
+		if(a.offsetLeft<target){//以数值型式得到元素属性值
+            speed=10;
+
+        }
+        else{
+            speed=-10;
+        }
+        if (a.offsetLeft==target) {
+            clearInterval(timer);
+        }
+        else{
+            a.style.left=a.offsetLeft+speed+"px";
+        }
+	},50);
+}
+</script>
+</html>
