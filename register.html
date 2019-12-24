@@ -217,9 +217,10 @@
 					P[2].innerHTML="两次密码输入不一致！"
 				Tag=1;
 			}
-			alert("注册成功<br>立即登录吧！");
-			if (Tag==0)
+			if (Tag==0){
+				alert("注册成功<br>立即登录吧！");
 				a[6].setAttribute("href","login.html");
+			}
 		}
 	</script>
 </body>
